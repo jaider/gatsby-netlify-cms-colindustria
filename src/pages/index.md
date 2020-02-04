@@ -1,16 +1,16 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+title: Equipos de Electrofusion
+image: '/img/20180822_174347[1].jpg'
+heading: Termofusion y Electrofusion
+subheading: Distribuidores Autorizados de Equipos de Termofusion Marca HAYES
 mainpitch:
-  title: Why Kaldi
-  description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+  title: CARACTERISTICAS DE LAS PLANCHAS HAYES
+  description: >-
+    Las planchas de Termofusión a Socket marca Hayes pueden solar una variedad
+    de tuberías termoplásticas en diferentes diámetros para numerosas
+    aplicaciones de la industria, tuberías tales como Polietileno PE,
+    Polipropileno PPR, Polibuteno PB y Fluoruro de polivinilideno PDVF.
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
@@ -68,3 +68,4 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
+
