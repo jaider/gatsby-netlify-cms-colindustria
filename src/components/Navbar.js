@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import shoppingCart from '../img/shopping/shopping-cart-solid.svg'
+import { withPrefix } from 'gatsby'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -42,7 +43,7 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+              <img src={`${withPrefix('/')}img/colindustria-logo.png`} alt="Kaldi" style={{ width: '88px' }} />
             </Link>
             {/* Hamburger menu */}
             <div
@@ -59,21 +60,30 @@ const Navbar = class extends React.Component {
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
-            <div className="navbar-start has-text-centered">
+            <div className="navbar-start has-text-centered" style={{fontFamily:'Raleway', fontSize: '16px', fontWeight: '500'}}>
               <Link className="navbar-item" to="/about">
-                About
+                Home
               </Link>
               <Link className="navbar-item" to="/products">
-                Products
+                Productos
               </Link>
               <Link className="navbar-item" to="/blog">
-                Blog
+                Cotizar
+              </Link>
+              <Link className="navbar-item" to="/blog">
+                Universidad
               </Link>
               <Link className="navbar-item" to="/contact">
-                Contact
+                Cont&aacute;ctenos
               </Link>
               <Link className="navbar-item" to="/contact/examples">
-                Form Examples
+                Mi Cuenta
+              </Link>
+              <Link className="navbar-item" to="/contact/examples">
+                <span class="icon is-medium">
+                  <img src={shoppingCart} alt="shopping cart" />
+                </span>
+                0 Items
               </Link>
             </div>
             <div className="navbar-end has-text-centered">
