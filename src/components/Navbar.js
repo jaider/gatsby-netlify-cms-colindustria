@@ -36,7 +36,7 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar"
         role="navigation"
         aria-label="main-navigation"
       >
@@ -65,13 +65,14 @@ const Navbar = class extends React.Component {
                 <Link className="navbar-link is-arrowless" to="/about">
                   Home
                 </Link>
-                <div class="navbar-dropdown is-right">
+                <div class="navbar-dropdown">
                   <Link className="navbar-item" to="/about">
                     Quienes somos?
                   </Link>
                   <Link className="navbar-item" to="/about">
                     Misión y Visión
                   </Link>
+                  <hr class="navbar-divider" />
                   <Link className="navbar-item" to="/about">
                     Terceros
                   </Link>
