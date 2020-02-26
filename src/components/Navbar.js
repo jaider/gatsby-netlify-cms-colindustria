@@ -61,9 +61,28 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-end has-text-centered" style={{fontFamily:'Raleway', fontSize: '16px', fontWeight: '500'}}>
-              <Link className="navbar-item" to="/about">
-                Home
-              </Link>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <Link className="navbar-link is-arrowless" to="/about">
+                  Home
+                </Link>
+                <div class="navbar-dropdown is-right">
+                  <Link className="navbar-item" to="/about">
+                    Quienes somos?
+                  </Link>
+                  <Link className="navbar-item" to="/about">
+                    Misión y Visión
+                  </Link>
+                  <Link className="navbar-item" to="/about">
+                    Terceros
+                  </Link>
+                  <Link className="navbar-item" to="/about">
+                    POLITICAS
+                  </Link>
+                  <Link className="navbar-item" to="/about">
+                    INFORMACION HSE
+                  </Link>
+                </div>
+              </div>
               <Link className="navbar-item" to="/products">
                 Productos
               </Link>
