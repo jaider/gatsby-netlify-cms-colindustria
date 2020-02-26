@@ -43,7 +43,7 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={`${withPrefix('/')}img/colindustria-logo.png`} alt="Kaldi" style={{ width: '88px' }} />
+              <img src={`${withPrefix('/')}img/colindustria-logo.png`} alt="Colindustria" style={{ width: '188px', height: '62px', maxHeight: 'none' }} />
             </Link>
             {/* Hamburger menu */}
             <div
@@ -60,7 +60,7 @@ const Navbar = class extends React.Component {
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
-            <div className="navbar-start has-text-centered" style={{fontFamily:'Raleway', fontSize: '16px', fontWeight: '500'}}>
+            <div className="navbar-end has-text-centered" style={{fontFamily:'Raleway', fontSize: '16px', fontWeight: '500'}}>
               <Link className="navbar-item" to="/about">
                 Home
               </Link>
@@ -79,24 +79,14 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/contact/examples">
                 Mi Cuenta
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                <span class="icon is-medium">
-                  <img src={shoppingCart} alt="shopping cart" />
-                </span>
-                0 Items
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
+              <span class="navbar-item">
+                <a class="button is-primary is-inverted">
+                  <span class="icon">
+                    <img src={shoppingCart} alt="shopping cart" />
+                  </span>
+                  <span>0 items</span>
+                </a>
+              </span>
             </div>
           </div>
         </div>
