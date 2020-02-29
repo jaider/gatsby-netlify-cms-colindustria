@@ -1,0 +1,97 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+
+const Slideshow = class extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      activeIndex: 0,
+    }
+  }
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.toggleSlide(),
+      40000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  toggleSlide = () => {
+    this.setState(
+      {
+        activeIndex: (this.state.activeIndex + 1) % this.props.slides.length,
+      }
+    );
+  }
+  render() {
+    return (
+      <>
+        {this.props.slides.map(({image, title, subheading}, i) => (
+          this.state.activeIndex === i && (
+          <div
+            key={i}
+            className="full-width-image-container margin-top-0 fade"
+            style={{
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(${
+                !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+              })`
+            }}
+            onClick={() => this.toggleSlide()}
+          >
+            <div
+              style={{
+                display: 'flex',
+                height: '150px',
+                lineHeight: '1',
+                justifyContent: 'space-around',
+                alignItems: 'left',
+                flexDirection: 'column',
+              }}
+            >
+              <h1
+                className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen has-text-centered"
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                  color: 'white',
+                  lineHeight: '1',
+                  padding: '0.25em',
+                }}
+              >
+                {title}
+              </h1>
+              <hr />
+              <h3
+                className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen has-text-centered"
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  color: 'white',
+                  lineHeight: '1',
+                  padding: '0.25em',
+                }}
+              >
+                {subheading}
+              </h3>
+            </div>
+          </div>
+          )
+        )
+        )}
+      </>
+    )
+  }
+}
+
+Slideshow.propTypes = {
+  slides: PropTypes.arrayOf(
+    PropTypes.shape({
+      image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+      title: PropTypes.string,
+      subheading: PropTypes.string,
+    })
+  ),
+}
+
+export default Slideshow

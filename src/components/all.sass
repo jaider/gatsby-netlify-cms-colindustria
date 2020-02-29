@@ -148,5 +148,20 @@ $menu-label-color: $white-ter
   font-weight: $weight-medium;
   background-color: rgba(255,255,255,0.9)
 
-.full-width-image
+.full-width-image-container
   height: 600px;
+
+/* Fading animation */
+.fade
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+
+@-webkit-keyframes fade
+  from {opacity: .4} 
+  to {opacity: 1}
+
+@keyframes fade
+  from {opacity: .4} 
+  to {opacity: 1}
