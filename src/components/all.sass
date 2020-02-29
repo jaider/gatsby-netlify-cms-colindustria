@@ -150,20 +150,24 @@ $menu-label-color: $white-ter
 .full-width-image-container
   height: 600px;
 
-/* Fading animation */
-.fade
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+.slideshow-container
+  margin: 0 auto;
 
-@-webkit-keyframes fade
-  from {opacity: .4} 
-  to {opacity: 1}
+.slideshow-hidden
+  position: absolute;
+  left: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
 
-@keyframes fade
-  from {opacity: .4} 
-  to {opacity: 1}
+.slideshow-visible
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=1);
 
 .col-slide-text
   font-weight: $weight-bold;

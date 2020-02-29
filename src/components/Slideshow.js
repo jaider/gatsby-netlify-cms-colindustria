@@ -28,12 +28,11 @@ const Slideshow = class extends React.Component {
   }
   render() {
     return (
-      <>
+      <div className="full-width-image-container slideshow-container">
         {this.props.slides.map(({image, title, subheading}, i) => (
-          this.state.activeIndex === i && (
           <div
             key={i}
-            className="full-width-image-container margin-top-0 fade"
+            className={`full-width-image-container margin-top-0 slideshow-hidden ${this.state.activeIndex === i ? 'slideshow-visible' : ''}`}
             style={{
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(${
                 !!image.childImageSharp ? image.childImageSharp.fluid.src : image
@@ -63,9 +62,8 @@ const Slideshow = class extends React.Component {
             </div>
           </div>
           )
-        )
         )}
-      </>
+      </div>
     )
   }
 }
