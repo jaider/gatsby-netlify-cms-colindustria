@@ -17,7 +17,7 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
-    <Slideshow slides={[{image, title, subheading}, {image: 'https://colindustria.com/wp-content/uploads/2019/06/BUTTFU1.jpg', title: 'Title2', subheading: 'Subheading 2'}]} />
+    <Slideshow slides={[{image, title, subheading}, {image: 'https://colindustria.com/wp-content/uploads/2019/06/BUTTFU1.jpg', title: 'Equipos de Electrofusion', subheading: 'Disponible a solo un Click'}]} />
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
