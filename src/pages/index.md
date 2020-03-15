@@ -4,24 +4,29 @@ title: Equipos de Electrofusion
 image: '/img/20180822_174347[1].jpg'
 heading: Termofusion y Electrofusion
 subheading: Distribuidores Autorizados de Equipos de Termofusion Marca HAYES
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
 videofeature:
   title: Procedimiento de fusion a socket
-  url: https://www.youtube.com/embed/zZAbua5ifPU?controls=0
   description: >-
-    Preparar la tuberia de polietileno
-    1. Corte y bisele el tubo con un biselador calibrador.
-    2.Ubique el anillo frio en la profundidad indicada por el calibrador.
-    3. Sujete los sockets a la plancha antes de encenderla.
-    4. Conecte la plancha a una corriente de 110V con polo a tierra y ajuste la temperatura. Permita suficiente tiempo de pre-calentamiento para estabilizar la temperatura.
+    ### Preparar la tuberia de polietileno
 
-    Proceso de pega de tuberia de polietileno
+    1. Corte y bisele el tubo con un biselador calibrador.
+
+    2. Ubique el anillo frio en la profundidad indicada por el calibrador.
+
+    3. Sujete los sockets a la plancha antes de encenderla.
+
+    4. Conecte la plancha a una corriente de 110V con polo a tierra y ajuste la
+    temperatura. Permita suficiente tiempo de pre-calentamiento para estabilizar
+    la temperatura.
+
+
+    ### Proceso de pega de tuberia de polietileno
+
     5. Coloque el tubo y el accesorio en los sockets por el tiempo estipulado.
-    6. Remueva el tubo y el accesorio de los sockets y únalos hasta alcanzar el tiempo de fusión y se haya formado el reborde de soldadura.
+
+    6. Remueva el tubo y el accesorio de los sockets y únalos hasta alcanzar el
+    tiempo de fusión y se haya formado el reborde de soldadura.
+  url: 'https://www.youtube.com/embed/zZAbua5ifPU?controls=0'
 mainpitch:
   title: CARACTERISTICAS DE LAS PLANCHAS HAYES
   description: >-
@@ -29,6 +34,11 @@ mainpitch:
     de tuberías termoplásticas en diferentes diámetros para numerosas
     aplicaciones de la industria, tuberías tales como Polietileno PE,
     Polipropileno PPR, Polibuteno PB y Fluoruro de polivinilideno PDVF.
+description: >-
+  Kaldi is the ultimate spot for coffee lovers who want to learn about their
+  java’s origin and support the farmers that grew it. We take coffee production,
+  roasting and brewing seriously and we’re glad to pass that knowledge to
+  anyone.
 intro:
   blurbs:
     - image: /img/coffee.png
