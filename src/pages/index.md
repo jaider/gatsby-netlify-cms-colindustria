@@ -1,14 +1,22 @@
 ---
 templateKey: index-page
 banners:
-  - image: /img/20180822_174347[1].jpg
-    heading: Equipos de Electrofusion
+  - heading: Termofusion y Electrofusion
+    image: /img/BUTTFU1.jpg
     subheading: Distribuidores Autorizados de Equipos de Termofusion Marca HAYES
-  - image: /img/coffee.png
-    heading: Termofusion y Electrofusion
-    subheading: We sell green and roasted coffee beans that are sourced directly from
+  - heading: Equipos de Electrofusion
+    image: '/img/20180822_174347[1].jpg'
+    subheading: Disponible a solo un Click
+  - heading: Kit de Plancha de Termofusion
+    image: /img/20180822_162043.jpg
+    subheading: Un Kit que todo soldador debe tener
+  - heading: Necesitas Pegar tuberia plastica a Tope?
+    image: /img/20180819_124117.jpg
+    subheading: Pincha abajo y compra ahora
+  - heading: Suscribete a nuestro boletin
+    image: /img/CONTACTENOS-COLINDUSTRIA.png
+    subheading: Recibe descuentos y promociones
 videofeature:
-  title: Procedimiento de fusion a socket
   description: >-
     #### Preparar la tuberia de polietileno
 
@@ -29,14 +37,15 @@ videofeature:
 
     6. Remueva el tubo y el accesorio de los sockets y únalos hasta alcanzar el
     tiempo de fusión y se haya formado el reborde de soldadura.
+  title: Procedimiento de fusion a socket
   url: 'https://www.youtube.com/embed/zZAbua5ifPU?controls=0'
 mainpitch:
-  title: CARACTERISTICAS DE LAS PLANCHAS HAYES
   description: >-
     Las planchas de Termofusión a Socket marca Hayes pueden solar una variedad
     de tuberías termoplásticas en diferentes diámetros para numerosas
     aplicaciones de la industria, tuberías tales como Polietileno PE,
     Polipropileno PPR, Polibuteno PB y Fluoruro de polivinilideno PDVF.
+  title: CARACTERISTICAS DE LAS PLANCHAS HAYES
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
@@ -71,19 +80,19 @@ intro:
         space where you can hang out with fellow coffee lovers and learn about
         coffee making techniques. All of the artwork on display there is for
         sale. The full price you pay goes to the artist.
-  heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
+  heading: What we offer
 main:
-  heading: Great coffee with no compromises
   description: >
     We hold our coffee to the highest standards from the shrub to the cup.
     That’s why we’re meticulous and transparent about each step of the coffee’s
     journey. We personally visit each farm to make sure the conditions are
     optimal for the plants, farmers and the local environment.
+  heading: Great coffee with no compromises
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/products-grid3.jpg
