@@ -54,7 +54,8 @@ $navbar-dropdown-item-hover-background-color: hsl(22, 80%, 54%);
 
 .full-width-image
     width: 100vw
-    height: 400px
+    min-height: 400px
+    height: inherit
     background-size: cover
     background-position: bottom
     display: flex
@@ -132,9 +133,7 @@ $menu-label-color: $white-ter
   flex-basis: 35%;
   margin: 0 1.5em 0 0;
 
-
 @import "~bulma"
-
 
 // responsiveness
 +tablet-only
@@ -152,11 +151,9 @@ $menu-label-color: $white-ter
 .navbar
   font-weight: $weight-medium;
 
-.full-width-image-container
-  height: 600px;
-
 .slideshow-container
   margin: 0 auto;
+  height: 600px;
 
 .slideshow-hidden
   position: absolute;
