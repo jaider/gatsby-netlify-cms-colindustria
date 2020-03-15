@@ -11,7 +11,7 @@ const Slideshow = class extends React.Component {
   componentDidMount() {
     this.timerID = setInterval(
       () => this.toggleSlide(),
-      4000
+      4000 // 4 seconds
     );
   }
 
@@ -29,7 +29,7 @@ const Slideshow = class extends React.Component {
   render() {
     return (
       <div className="slideshow-container">
-        {this.props.slides.map(({image, title, subheading}, i) => (
+        {this.props.slides.map(({image, heading, subheading}, i) => (
           <div
             key={i}
             className={`full-width-image margin-top-0 slideshow-hidden ${this.state.activeIndex === i ? 'slideshow-visible' : ''}`}
@@ -54,7 +54,7 @@ const Slideshow = class extends React.Component {
               <h1
                 className="is-size-3-mobile is-size-2-tablet is-size-1-widescreen has-text-centered col-slide-text col-slide-border"
               >
-                {title}
+                {heading}
               </h1>
               <h3
                 className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen has-text-centered col-slide-text"
@@ -77,7 +77,7 @@ Slideshow.propTypes = {
   slides: PropTypes.arrayOf(
     PropTypes.shape({
       image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      title: PropTypes.string,
+      heading: PropTypes.string,
       subheading: PropTypes.string,
     })
   ),

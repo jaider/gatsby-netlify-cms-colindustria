@@ -12,27 +12,18 @@ import recommended from 'remark-preset-lint-recommended';
 import remarkHtml from 'remark-html';
 import Content, { HTMLContent } from '../components/Content'
 
-export const IndexPageTemplate = ({ image, title, heading, subheading, videofeature, mainpitch, description, intro, contentComponent }) => 
+export const IndexPageTemplate = ({ banners, videofeature, mainpitch, description, intro, contentComponent }) => 
 {
   
   const videofeatureDescription = remark()
     .use(recommended)
     .use(remarkHtml)
     .processSync(videofeature.description).toString();
-  const PageContent = contentComponent || Content;
+  const PageContent = contentComponent || HTMLContent; // TODO: fix it later. should be Content but preview is not working
     
   return (
   <div>
-    <Slideshow
-      slides={[
-        { image, title, subheading },
-        {
-          image: "https://colindustria.com/wp-content/uploads/2019/06/BUTTFU1.jpg",
-          title: "Termofusion y Electrofusion",
-          subheading: "Disponible a solo un Click"
-        }
-      ]}
-    />
+    <Slideshow slides={banners} />
     <section class="section has-background-light">
       <div class="container">
         <h1 class="title has-text-centered">{videofeature.title}</h1>
@@ -62,7 +53,7 @@ export const IndexPageTemplate = ({ image, title, heading, subheading, videofeat
                 </div>
                 <div className="columns">
                   <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
+                    <h3 className="has-text-weight-semibold is-size-2">OLD HEADING</h3>
                     <p>{description}</p>
                   </div>
                 </div>
@@ -94,10 +85,7 @@ export const IndexPageTemplate = ({ image, title, heading, subheading, videofeat
     };
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
+  banners: PropTypes.array,
   videofeature: PropTypes.object,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
@@ -112,10 +100,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
+        banners={frontmatter.banners}
         videofeature={frontmatter.videofeature}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
@@ -140,16 +125,17 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+        banners {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
+          heading
+          subheading
         }
-        heading
-        subheading
         videofeature {
           title
           url

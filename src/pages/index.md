@@ -1,9 +1,12 @@
 ---
 templateKey: index-page
-title: Equipos de Electrofusion
-image: '/img/20180822_174347[1].jpg'
-heading: Termofusion y Electrofusion
-subheading: Distribuidores Autorizados de Equipos de Termofusion Marca HAYES
+banners:
+  - image: /img/20180822_174347[1].jpg
+    heading: Equipos de Electrofusion
+    subheading: Distribuidores Autorizados de Equipos de Termofusion Marca HAYES
+  - image: /img/coffee.png
+    heading: Termofusion y Electrofusion
+    subheading: We sell green and roasted coffee beans that are sourced directly from
 videofeature:
   title: Procedimiento de fusion a socket
   description: >-
