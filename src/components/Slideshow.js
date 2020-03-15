@@ -61,6 +61,9 @@ const Slideshow = class extends React.Component {
               >
                 {subheading}
               </h3>
+              <div className="has-text-centered">
+                <a href="http://web.colindustria.com/shop/" target="_self" class="button is-primary">Conocer Mas</a>
+              </div>
             </div>
           </div>
           )
