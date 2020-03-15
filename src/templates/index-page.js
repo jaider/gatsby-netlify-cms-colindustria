@@ -12,12 +12,26 @@ export const IndexPageTemplate = ({
   title,
   heading,
   subheading,
+  videofeature,
   mainpitch,
   description,
   intro,
 }) => (
   <div>
     <Slideshow slides={[{image, title, subheading}, {image: 'https://colindustria.com/wp-content/uploads/2019/06/BUTTFU1.jpg', title: 'Termofusion y Electrofusion', subheading: 'Disponible a solo un Click'}]} />
+    <section class="section has-background-light">
+      <div class="container">
+        <h1 class="title has-text-centered">{videofeature.title}</h1>
+        <div class="columns">
+          <div class="column">
+            <figure class="image is-16by9">
+              <iframe class="has-ratio" width="640" height="360" src={videofeature.url} frameborder="0" allowfullscreen></iframe>
+            </figure>
+          </div>
+          <div class="column is-one-third">{videofeature.description}</div>
+        </div>
+      </div>
+    </section>
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -73,6 +87,7 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
+  videofeature: PropTypes.object,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
@@ -90,6 +105,7 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
+        videofeature={frontmatter.videofeature}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
@@ -122,6 +138,11 @@ export const pageQuery = graphql`
         }
         heading
         subheading
+        videofeature {
+          title
+          url
+          description
+        }
         mainpitch {
           title
           description
