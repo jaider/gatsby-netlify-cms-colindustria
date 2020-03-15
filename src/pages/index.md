@@ -7,7 +7,7 @@ subheading: Distribuidores Autorizados de Equipos de Termofusion Marca HAYES
 videofeature:
   title: Procedimiento de fusion a socket
   description: >-
-    ### Preparar la tuberia de polietileno
+    #### Preparar la tuberia de polietileno
 
     1. Corte y bisele el tubo con un biselador calibrador.
 
@@ -20,7 +20,7 @@ videofeature:
     la temperatura.
 
 
-    ### Proceso de pega de tuberia de polietileno
+    #### Proceso de pega de tuberia de polietileno
 
     5. Coloque el tubo y el accesorio en los sockets por el tiempo estipulado.
 

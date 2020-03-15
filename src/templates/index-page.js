@@ -1,24 +1,38 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql } from "gatsby";
 
-import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
-import Slideshow from '../components/Slideshow'
+import Layout from "../components/Layout";
+import Features from "../components/Features";
+import BlogRoll from "../components/BlogRoll";
+import Slideshow from "../components/Slideshow";
 
-export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  videofeature,
-  mainpitch,
-  description,
-  intro,
-}) => (
+import remark from 'remark';
+import recommended from 'remark-preset-lint-recommended';
+import remarkHtml from 'remark-html';
+import Content, { HTMLContent } from '../components/Content'
+
+export const IndexPageTemplate = ({ image, title, heading, subheading, videofeature, mainpitch, description, intro, contentComponent }) => 
+{
+  
+  const videofeatureDescription = remark()
+    .use(recommended)
+    .use(remarkHtml)
+    .processSync(videofeature.description).toString();
+  const PageContent = contentComponent || Content;
+    
+  return (
   <div>
-    <Slideshow slides={[{image, title, subheading}, {image: 'https://colindustria.com/wp-content/uploads/2019/06/BUTTFU1.jpg', title: 'Termofusion y Electrofusion', subheading: 'Disponible a solo un Click'}]} />
+    <Slideshow
+      slides={[
+        { image, title, subheading },
+        {
+          image: "https://colindustria.com/wp-content/uploads/2019/06/BUTTFU1.jpg",
+          title: "Termofusion y Electrofusion",
+          subheading: "Disponible a solo un Click"
+        }
+      ]}
+    />
     <section class="section has-background-light">
       <div class="container">
         <h1 class="title has-text-centered">{videofeature.title}</h1>
@@ -28,7 +42,7 @@ export const IndexPageTemplate = ({
               <iframe class="has-ratio" width="640" height="360" src={videofeature.url} frameborder="0" allowfullscreen></iframe>
             </figure>
           </div>
-          <div class="column is-one-third">{videofeature.description}</div>
+          <PageContent className="column is-one-third content" content={videofeatureDescription} />
         </div>
       </div>
     </section>
@@ -48,9 +62,7 @@ export const IndexPageTemplate = ({
                 </div>
                 <div className="columns">
                   <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
+                    <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
                     <p>{description}</p>
                   </div>
                 </div>
@@ -63,9 +75,7 @@ export const IndexPageTemplate = ({
                   </div>
                 </div>
                 <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
+                  <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
                   <BlogRoll />
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/blog">
@@ -81,6 +91,7 @@ export const IndexPageTemplate = ({
     </section>
   </div>
 )
+    };
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -91,13 +102,13 @@ IndexPageTemplate.propTypes = {
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
-    blurbs: PropTypes.array,
+    blurbs: PropTypes.array
   }),
-}
+  contentComponent: PropTypes.func
+};
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
-
+  const { frontmatter } = data.markdownRemark;
   return (
     <Layout>
       <IndexPageTemplate
@@ -109,20 +120,21 @@ const IndexPage = ({ data }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
+        contentComponent={HTMLContent}
       />
     </Layout>
-  )
-}
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
-}
+      frontmatter: PropTypes.object
+    })
+  })
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
@@ -165,4 +177,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
