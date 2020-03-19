@@ -38,7 +38,7 @@ videofeature:
     6. Remueva el tubo y el accesorio de los sockets y únalos hasta alcanzar el
     tiempo de fusión y se haya formado el reborde de soldadura.
   title: Procedimiento de fusion a socket
-  url: 'https://www.youtube.com/embed/zZAbua5ifPU?controls=0'
+  url: 'zZAbua5ifPU'
 mainpitch:
   description: >-
     Las planchas de Termofusión a Socket marca Hayes pueden solar una variedad
