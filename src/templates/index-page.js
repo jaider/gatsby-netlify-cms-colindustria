@@ -6,11 +6,12 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import Slideshow from "../components/Slideshow";
+import LazyYoutube from "../components/LazyYoutube";
 
 import remark from 'remark';
 import recommended from 'remark-preset-lint-recommended';
 import remarkHtml from 'remark-html';
-import Content, { HTMLContent } from '../components/Content'
+import { HTMLContent } from '../components/Content'
 
 export const IndexPageTemplate = ({ banners, videofeature, mainpitch, description, intro, contentComponent }) => 
 {
@@ -29,16 +30,8 @@ export const IndexPageTemplate = ({ banners, videofeature, mainpitch, descriptio
         <h1 class="title has-text-centered">{videofeature.title}</h1>
         <div class="columns">
           <div class="column">
-            <figure class="image is-16by9">
-              <iframe
-                class="has-ratio" 
-                width="640"
-                height="360"
-                src={`https://www.youtube.com/embed/${videofeature.url}`}
-                srcdoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/${videofeature.url}?autoplay=1><img src=https://img.youtube.com/vi/${videofeature.url}/hqdefault.jpg alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>`}
-                frameborder="0"
-                allowfullscreen
-              ></iframe>
+            <figure class="image is-16by9 lazyimage">
+              <LazyYoutube url={videofeature.url} />
             </figure>
           </div>
           <PageContent className="column is-one-third content" content={videofeatureDescription} />
