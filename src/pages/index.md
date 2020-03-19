@@ -5,7 +5,7 @@ banners:
     image: /img/BUTTFU1.jpg
     subheading: Distribuidores Autorizados de Equipos de Termofusion Marca HAYES
   - heading: Equipos de Electrofusion
-    image: '/img/20180822_174347[1].jpg'
+    image: '/img/20180822_174347.jpg'
     subheading: Disponible a solo un Click
   - heading: Kit de Plancha de Termofusion
     image: /img/20180822_162043.jpg
@@ -14,7 +14,7 @@ banners:
     image: /img/20180819_124117.jpg
     subheading: Pincha abajo y compra ahora
   - heading: Suscribete a nuestro boletin
-    image: /img/CONTACTENOS-COLINDUSTRIA.png
+    image: /img/CONTACTENOS-COLINDUSTRIA.jpg
     subheading: Recibe descuentos y promociones
 videofeature:
   description: >-
