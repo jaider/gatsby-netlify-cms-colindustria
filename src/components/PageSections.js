@@ -4,6 +4,10 @@ import classNames from 'classnames';
 import LazyYoutube from "./LazyYoutube"; 
 import { HTMLContent } from '../components/Content'
 
+// https://github.com/aFarkas/lazysizes
+// https://web.dev/codelab-use-lazysizes-to-lazyload-images/
+import 'lazysizes';
+
 import remark from 'remark';
 import recommended from 'remark-preset-lint-recommended';
 import remarkHtml from 'remark-html';
@@ -11,11 +15,11 @@ import remarkHtml from 'remark-html';
 const ImageView = ({ resize, imageSrc, title }) =>
   resize !== 'none' ? (
     <figure className={classNames("image", "lazyimage", resize)}>
-      <img src={imageSrc} alt={title} />
+      <img data-src={imageSrc} alt={title} className="lazyload" />
     </figure>
   ) : (
     <center>
-      <img src={imageSrc} alt={title} />
+      <img data-src={imageSrc} alt={title} className="lazyload" />
     </center>
   );
 
