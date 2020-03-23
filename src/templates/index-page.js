@@ -6,38 +6,14 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import Slideshow from "../components/Slideshow";
-import LazyYoutube from "../components/LazyYoutube";
-
-import remark from 'remark';
-import recommended from 'remark-preset-lint-recommended';
-import remarkHtml from 'remark-html';
+import PageSections from "../components/PageSections"; 
 import { HTMLContent } from '../components/Content'
 
-export const IndexPageTemplate = ({ banners, videofeature, mainpitch, description, intro, contentComponent }) => 
-{
-  
-  const videofeatureDescription = remark()
-    .use(recommended)
-    .use(remarkHtml)
-    .processSync(videofeature.description).toString();
-  const PageContent = contentComponent || HTMLContent; // TODO: fix it later. should be Content but preview is not working
-    
-  return (
+export const IndexPageTemplate = ({ banners, sections, mainpitch, description, intro, contentComponent }) => 
+(
   <div>
     <Slideshow slides={banners} />
-    <section class="section has-background-light">
-      <div class="container">
-        <h1 class="title has-text-centered">{videofeature.title}</h1>
-        <div class="columns">
-          <div class="column">
-            <figure class="image is-16by9 lazyimage">
-              <LazyYoutube url={videofeature.url} />
-            </figure>
-          </div>
-          <PageContent className="column is-one-third content" content={videofeatureDescription} />
-        </div>
-      </div>
-    </section>
+    <PageSections items={sections} contentComponent ={contentComponent} />
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -82,12 +58,11 @@ export const IndexPageTemplate = ({ banners, videofeature, mainpitch, descriptio
       </div>
     </section>
   </div>
-)
-    };
+);
 
 IndexPageTemplate.propTypes = {
   banners: PropTypes.array,
-  videofeature: PropTypes.object,
+  sections: PropTypes.array,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
@@ -102,7 +77,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         banners={frontmatter.banners}
-        videofeature={frontmatter.videofeature}
+        sections={frontmatter.sections}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
@@ -137,10 +112,20 @@ export const pageQuery = graphql`
           heading
           subheading
         }
-        videofeature {
+        sections {
           title
-          url
           description
+          align
+          contentSize
+          imageResize
+          youtubeId
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1024, quality: 64) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
         mainpitch {
           title

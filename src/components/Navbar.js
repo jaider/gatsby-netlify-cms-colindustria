@@ -44,8 +44,9 @@ const Navbar = class extends React.Component {
             <Link to="/" className="navbar-item" title="Logo">
               <img src={`${withPrefix('/')}img/colindustria-logo-sm.png`} alt="Colindustria" />
             </Link>
-            {/* Hamburger menu */}
             <div
+              role="altmenu"
+              aria-label="alternative-menu"
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
               onClick={() => this.toggleHamburger()}
@@ -61,18 +62,18 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-end has-text-centered">
-              <div class="navbar-item has-dropdown is-hoverable">
+              <div className="navbar-item has-dropdown is-hoverable">
                 <Link className="navbar-link is-arrowless" to="/about">
                   Home
                 </Link>
-                <div class="navbar-dropdown">
+                <div className="navbar-dropdown">
                   <Link className="navbar-item" to="/about">
                     Quienes somos?
                   </Link>
                   <Link className="navbar-item" to="/about">
                     Misión y Visión
                   </Link>
-                  <hr class="navbar-divider" />
+                  <hr className="navbar-divider" />
                   <Link className="navbar-item" to="/about">
                     Terceros
                   </Link>
@@ -99,9 +100,9 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/contact/examples">
                 Mi Cuenta
               </Link>
-              <span class="navbar-item">
-                <a class="button is-primary is-inverted">
-                  <span class="icon">
+              <span className="navbar-item">
+                <a className="button is-primary is-inverted" href="#">
+                  <span className="icon">
                     <img src={shoppingCart} alt="shopping cart" />
                   </span>
                   <span>0 items</span>

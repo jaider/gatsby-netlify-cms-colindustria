@@ -37,7 +37,7 @@ const Slideshow = class extends React.Component {
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(${
                 !!image.childImageSharp ? image.childImageSharp.fluid.src : image
               })`,
-              backgroundPosition: `top left`,
+              backgroundPosition: `center center`,
               backgroundAttachment: `fixed`,
             }}
           >
