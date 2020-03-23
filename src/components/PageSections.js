@@ -32,8 +32,11 @@ PageSections.propTypes = {
     PropTypes.shape({
       title: PropTypes.string,
       description: PropTypes.string,
+      align: PropTypes.string,
+      contentSize: 'is-two-thirds' | 'is-half' | 'is-one-third' | 'is-full',
+      imageResize: 'none' | 'is-square' | 'is-5by4' | 'is-4by3' | 'is-3by2' | 'is-16by9',
       youtubeId: PropTypes.string,
-      image: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+      image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     })
   ),
   contentComponent: PropTypes.func
