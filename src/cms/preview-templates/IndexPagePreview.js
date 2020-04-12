@@ -2,17 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { IndexPageTemplate } from '../../templates/index-page'
 
-const IndexPagePreview = ({ entry, getAsset }) => {
+const IndexPagePreview = ({ entry }) => {
   const data = entry.getIn(['data']).toJS()
 
   if (data) {
     return (
       <IndexPageTemplate
         banners={data.banners}
-        description={data.description}
-        intro={data.intro || { blurbs: [] }}
         sections={data.sections}
-        mainpitch={data.mainpitch || {}}
       />
     )
   } else {
