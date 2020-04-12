@@ -58,6 +58,7 @@ sections:
       aplicaciones de la industria, tuberías tales como Polietileno PE,
       Polipropileno PPR, Polibuteno PB y Fluoruro de polivinilideno PDVF.
 
+
       Estas máquinas de soldadura están equipadas con un regulador de
       temperatura digital de clase industrial con excelentes características
       para controlar la temperatura de forma precisa y flexible. El mango está
@@ -86,8 +87,10 @@ sections:
       internacionales de la Norma Alemana DVS 2207 y también cumplen con lo
       establecido en la norma americana ASTM F 2620. 
 
+
       Las maquinas están diseñadas para trabajo pesado, son de alta calidad,
       robustas y garantizadas.
+
 
       Siguiendo el proceso de fusión adecuadamente, aplicando las instrucciones
       del manual y realizando los mantenimientos preventivos, le garantizamos
@@ -129,6 +132,7 @@ sections:
       que se aplica calor, que en este caso es a través de una resistencia
       eléctrica incrustada en el accesorio de plástico, evitando así el uso de
       la plancha de calentamiento.
+
 
       Aunque la máquina de Electrofusion suele ser más económica que un equipo
       de termofusión siempre existe la necesidad de un accesorio de
