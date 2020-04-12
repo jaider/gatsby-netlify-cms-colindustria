@@ -120,7 +120,7 @@ sections:
     imageResize: none
     title: Equipos para Termofusion de Silletas
   - align: left
-    contentSize: is-half
+    contentSize: is-two-thirds
     description: >-
       #### Aplicación/procedimiento:
 
@@ -152,7 +152,7 @@ sections:
       y registros. Informa el tiempo transcurrido en la soldadura y el
       enfriamiento.
     image: /img/ELECTROFUSION-MACHINE-PPR-HDPE-358010_3.jpg
-    imageResize: is-5by4
+    imageResize: is-square
     title: Equipos de Electrofusion
 mainpitch:
   description: >-
