@@ -112,6 +112,7 @@ sections:
       200, 160, 110, 90, 63 mm o acometidas domiciliarias en salidas de 20,25,32
       mm, también aplica para pulgadas 12” 10” 8″ 6″ 4″ 3″ 2″.
 
+
       El cuerpo de la silleta es fabricado en aluminio fundido de calidad
       industrial, está acoplado con una base para sujetar el tubo con cadenas,
       incluye un manómetro de indicación de presión de fusión, una plancha de
