@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import 'lazysizes';
+
 const ImageView = ({code, onClick}) => (
     <>
-        <img src={`https://img.youtube.com/vi/${code}/sddefault.jpg`} onClick={onClick} alt="Youtube Image" />
+        <img data-src={`https://img.youtube.com/vi/${code}/sddefault.jpg`} className="lazyload" onClick={onClick} alt="Youtube Image" />
         <span onClick={onClick}>▶</span>
     </>
 );
