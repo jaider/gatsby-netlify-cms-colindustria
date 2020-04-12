@@ -4,8 +4,7 @@ import classNames from 'classnames';
 import LazyYoutube from "./LazyYoutube"; 
 import { HTMLContent } from '../components/Content'
 
-// https://github.com/aFarkas/lazysizes
-// https://web.dev/codelab-use-lazysizes-to-lazyload-images/
+// This lazy images lib is not loaded on Preview so images does not load
 import 'lazysizes';
 
 import remark from 'remark';
@@ -58,9 +57,9 @@ export const PageSection = (props) =>
   const whiteOrGray = index % 2 !== 0  ? "has-background-white" : "has-background-light";
   const columnSize = contentSize !== 'is-full' ? contentSize : '';
   const columsClass = contentSize !== 'is-full' ? 'columns' : '';
-  console.log(props);
+  
   return (
-    <section className={classNames("section", whiteOrGray)}>
+    <section className={classNames("section", "page-section", whiteOrGray)}>
       <div className="container">
         <h1 className="title has-text-centered">{title}</h1>
         <div className={columsClass}>

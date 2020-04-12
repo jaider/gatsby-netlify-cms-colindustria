@@ -10,6 +10,7 @@ const IndexPagePreview = ({ entry }) => {
       <IndexPageTemplate
         banners={data.banners}
         sections={data.sections}
+        products={data.topProducts}
       />
     )
   } else {

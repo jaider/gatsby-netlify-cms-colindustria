@@ -6,11 +6,13 @@ import Layout from "../components/Layout";
 import Slideshow from "../components/Slideshow";
 import PageSections from "../components/PageSections"; 
 import { HTMLContent } from '../components/Content'
+import TopProducts from "../components/TopProducts";
 
-export const IndexPageTemplate = ({ banners, sections, contentComponent }) => 
+export const IndexPageTemplate = ({ banners, sections, products, contentComponent }) => 
 (
   <div>
     <Slideshow slides={banners} />
+    <TopProducts items={products} />
     <PageSections items={sections} contentComponent={contentComponent} />
   </div>
 );
@@ -28,6 +30,7 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         banners={frontmatter.banners}
         sections={frontmatter.sections}
+        products={frontmatter.topProducts}
         contentComponent={HTMLContent}
       />
     </Layout>
@@ -69,6 +72,17 @@ export const pageQuery = graphql`
           image {
             childImageSharp {
               fluid(maxWidth: 1024, quality: 64) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        topProducts {
+          title
+          url
+          image {
+            childImageSharp {
+              fluid(maxWidth: 260, quality: 95) {
                 ...GatsbyImageSharpFluid
               }
             }

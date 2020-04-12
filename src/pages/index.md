@@ -159,5 +159,18 @@ sections:
     image: /img/ELECTROFUSION-MACHINE-PPR-HDPE-358010_3.jpg
     imageResize: is-square
     title: Equipos de Electrofusion
+topProducts:
+  - title: Termofusion a socket
+    image: /img/HAYES-HEATING-IRON-AND-ACCESORIES.jpg
+    url: https://colindustria.com/todos-los-productos-colindustria/productos-de-termofusion/teoria-de-la-fusion-a-socket/
+  - title: Termofusion a tope
+    image: /img/TERMFUSION-BUTT-FUSION-MACHINE-EQUIPMENT-HDPE-PPR-PEAD-PIPE-1-FUSION.jpg
+    url: https://colindustria.com/todos-los-productos-colindustria/productos-de-termofusion/
+  - title: Electrofusion
+    image: /img/ELECTROFUSION-MACHINE-PPR-HDPE-358010_1WEBSITE-COLINDUSTRIA.jpg
+    url: https://colindustria.com/todos-los-productos-colindustria/productos-de-termofusion/
+  - title: Termofusion silleta
+    image: /img/EQUIPOS-DE-SILLETA.jpg
+    url: https://colindustria.com/todos-los-productos-colindustria/productos-de-termofusion/
 ---
 
