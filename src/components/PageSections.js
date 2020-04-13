@@ -59,9 +59,9 @@ export const PageSection = (props) =>
   const columsClass = contentSize !== 'is-full' ? 'columns' : '';
   
   return (
-    <section className={classNames("section", "page-section", whiteOrGray)}>
+    <section className={classNames("section", "text-section", "has-text-grey", whiteOrGray)}>
       <div className="container">
-        <h1 className="title has-text-centered">{title}</h1>
+        <h2 className="title has-text-centered">{title}</h2>
         <div className={columsClass}>
           {align === 'left' && <PageContent className={classNames("column", columnSize, "content")} content={descriptionHtml} />}
           <div className="column">

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 const TopProducts = ({ items }) => (
-  <section className="section">
+  <section className="section text-section">
     <div className="container content">
       <h2 className="title has-text-centered">Maquinas de termofusion y electrofusion para pegar tuberia de polietileno y polipropileno</h2>
       <div className="columns is-multiline">

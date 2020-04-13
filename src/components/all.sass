@@ -1,6 +1,6 @@
 @import "~bulma/sass/utilities/initial-variables"
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700');
 
 // Config vars
 // Colindustria logo brand colors are: Blue #00446A, Green #A6d36A
@@ -20,7 +20,7 @@ $success-invert: $col-main-color-invert
 $info: $col-main-blue-color
 
 // Colindustria custom
-$family-sans-serif: Raleway, Roboto, sans-serif;
+$family-sans-serif: Roboto, sans-serif;
 $navbar-height: 4.5rem;
 $navbar-item-img-max-height: 3rem;
 $navbar-dropdown-item-hover-color: hsl(0, 0%, 96%);
@@ -201,7 +201,16 @@ $menu-label-color: $white-ter
   color: white;
   text-shadow: 0 0 0.5em black;
 
-.page-section h3,
-.page-section h4,
-.page-section h5
+.text-section h3,
+.text-section h4,
+.text-section h5
   color: $col-main-blue-color;
+  font-weight: 500;
+
+.text-section h1,
+.text-section h2,
+.text-section h3,
+.text-section h4,
+.text-section h5,
+.text-section h6
+  font-weight: normal;
